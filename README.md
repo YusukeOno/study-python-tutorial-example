@@ -39,3 +39,9 @@ django-admin startproject [任意のプロジェクト名]
 cd [任意のプロジェクト名]
 python3 manage.py runserver
 ```
+
+ブラウザから以下のURLにアクセスする。
+
+```
+http://127.0.0.1:8000/
+```
