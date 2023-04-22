@@ -1,4 +1,5 @@
 import sys
+from datetime import datetime
 from database import DatabaseManager
 
 
@@ -8,15 +9,17 @@ db = DatabaseManager('bookmarks.db')
 class CreateBookmaksTableCommand:
     def execute(self):
         db.create_table('bookmarks', {
-            'id': 'integer primary key autoicrement',
+            'id': 'integer primary key autoincrement',
             'タイトル': 'text not null',
             'url': 'text not null',
             'メモ': 'text',
             '追加日時': 'text not null',
         })
 
+
+class AddBookmarkCommand:
     def execute(self, data):
-        data['date_added'] = datetime.utcnow(), isoformat()
+        data['date_added'] = datetime.utcnow().isoformat()
         db.add('bookmarks', data)
         return 'ブックマークを追加しました。'
 
