@@ -10,10 +10,10 @@ class CreateBookmaksTableCommand:
     def execute(self):
         db.create_table('bookmarks', {
             'id': 'integer primary key autoincrement',
-            'タイトル': 'text not null',
+            'title': 'text not null',
             'url': 'text not null',
-            'メモ': 'text',
-            '追加日時': 'text not null',
+            'notes': 'text',
+            'date_added': 'text not null',
         })
 
 
