@@ -4,7 +4,7 @@ class Book:
         self.subtitle = data['subtitle']
 
     @property
-    def displaay_title(self):
+    def display_title(self):
 
         if self.title and self.subtitle:
             return f'{self.title}: {self.subtitle}'

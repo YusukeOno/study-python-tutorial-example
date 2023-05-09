@@ -2,9 +2,9 @@ class Book:
     def __init__(self, data):
         self.title = data['title']
         self.subtitle = data['subtitle']
-        self.set_displaay_title()
+        self.set_display_title()
 
-    def set_displaay_title(self):
+    def set_display_title(self):
         if self.title and self.subtitle:
             self.display_title = f'{self.title}: {self.subtitle}'
         elif self.title:
